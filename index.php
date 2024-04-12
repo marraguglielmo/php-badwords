@@ -21,7 +21,6 @@ $parola = $_POST['parola'];
 <style>
     .container {
         .row {
-            height: 100px;
 
             &>div {
                 border: 2px solid black;
@@ -29,6 +28,10 @@ $parola = $_POST['parola'];
                 span {
                     font-weight: bold;
                     font-size: 1.3rem;
+                }
+
+                &:last-child {
+                    background-color: red;
                 }
             }
         }
@@ -39,9 +42,14 @@ $parola = $_POST['parola'];
     <section>
         <div class="container">
             <h1 class="text-center">badWords</h1>
-            <div class="row d-flex align-items-center row-cols-2">
+            <div class="row d-flex align-items-center row-cols-2 my-4">
                 <div class="col1">
-                    <span>Il paragrafo ricevuto è:</span> <?php echo str_replace($parola, '***', $paragrafo); ?>
+                    <span>Il paragrafo ricevuto è:</span> <?php echo $paragrafo ?>. <br>
+                    <span>La sua lunghezza è: <?php echo strlen($paragrafo) ?></span>
+                </div>
+                <div class="col1">
+                    <span>Il paragrafo ricevuto è:</span> <?php echo str_replace($parola, '***', $paragrafo); ?>. <br>
+                    <span>La sua lunghezza è: <?php echo strlen($paragrafo) ?></span>
                 </div>
                 <div class="col2">
                     <span>Parola censurata:</span> <?php echo $parola ?>
