@@ -48,11 +48,11 @@ $parola = $_POST['parola'];
                     <span>La sua lunghezza è: <?php echo strlen(trim($paragrafo)) ?></span>
                 </div>
                 <div class="col1">
-                    <span>Il paragrafo ricevuto è:</span> <?php echo str_replace(trim($parola), '***', trim($paragrafo)); ?>. <br>
+                    <span>Il paragrafo censurato è:</span> <?php echo str_replace(trim($parola), '***', trim($paragrafo)); ?>. <br>
                     <span>La sua lunghezza è: <?php echo strlen(trim($paragrafo)) ?></span>
                 </div>
                 <div class="col2">
-                    <span>Parola censurata:</span> <?php echo trim($parola) ?>
+                    <span>Parola censurata: <?php echo trim($parola) ?></span>
                 </div>
             </div>
             <div class="container">
