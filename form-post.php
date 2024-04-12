@@ -11,32 +11,28 @@
 </head>
 
 <style>
-    textarea {
+    /* textarea {
         width: 50% !important;
-    }
+    } */
 </style>
 
 <body>
 
-    <div class="container">
-        <div class="row">
-            <div class="col">
-                <form action="index.php" method="post">
+    <div class="container py-5">
+        <div class="row w-50 m-auto">
+            <form action="index.php" method="post">
 
-                    <div>
-                        <label class="form-label">Paragrafo</label>
-                        <textarea name="paragrafo" cols="20" rows="4" class="form-control"></textarea>
-                    </div>
-            </div>
-            <div class="col">
-
-                <div>
-                    <label class="form-label">Parola</label>
-                    <input name="parola" type="text" placeholder="Scrivi una parola">
+                <div class="mb-3">
+                    <label class="form-label">Paragrafo</label>
+                    <textarea name="paragrafo" class="form-control" rows="3"></textarea>
                 </div>
-            </div>
+                <div class="mb-3">
+                    <label class="form-label">Parola</label>
+                    <input name="parola" type="text" class="form-control" placeholder="Scrivi una parola">
+                </div>
 
-            <button type="submit" class="btn btn-primary">Invia</button>
+
+                <button type="submit" class="btn btn-primary w-25 m-auto">Invia</button>
             </form>
         </div>
     </div>

@@ -3,7 +3,7 @@
 $paragrafo = $_POST['paragrafo'];
 $parola = $_POST['parola'];
 
-var_dump($paragrafo);
+
 ?>
 
 <!DOCTYPE html>
@@ -22,6 +22,15 @@ var_dump($paragrafo);
     .container {
         .row {
             height: 100px;
+
+            &>div {
+                border: 2px solid black;
+
+                span {
+                    font-weight: bold;
+                    font-size: 1.3rem;
+                }
+            }
         }
     }
 </style>
@@ -32,15 +41,15 @@ var_dump($paragrafo);
             <h1 class="text-center">badWords</h1>
             <div class="row d-flex align-items-center row-cols-2">
                 <div class="col1">
-                    Il paragrafo ricevuto è: <?php echo $paragrafo ?>
+                    <span>Il paragrafo ricevuto è:</span> <?php echo str_replace($parola, '***', $paragrafo); ?>
                 </div>
                 <div class="col2">
-                    Parola censurata: <?php echo $parola ?>
+                    <span>Parola censurata:</span> <?php echo $parola ?>
                 </div>
             </div>
             <div class="container">
-                <button>
-                    <a href="form-post.php">Vai al form</a>
+                <button class="btn btn-primary">
+                    <a class=" text-white" href="form-post.php">Vai al form</a>
                 </button>
             </div>
         </div>
