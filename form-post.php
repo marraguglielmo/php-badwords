@@ -7,38 +7,41 @@
     <!-- bootstrap -->
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css' integrity='sha512-jnSuA4Ss2PkkikSOLtYs8BlYIeeIK1h99ty4YfvRPAlzr377vr3CXDb7sb7eEEBYjDtcYj+AjBH3FLv5uSJuXg==' crossorigin='anonymous' />
 
-    <title>Form-post</title>
+    <link rel="stylesheet" href="css/style.css">
+    <title>Form Post</title>
 </head>
 
-<style>
-    /* textarea {
-        width: 50% !important;
-    } */
-</style>
+<body class="body-2">
 
-<body>
+    <section>
+        <div class="container">
+            <div class="row w-25 m-auto">
+                <h1 class="text-center my-4">Form</h1>
+                <div class="col">
+                    <form action="index.php" method="post">
+                        <!-- textarea -->
+                        <div>
+                            <label class="form-label">Paragrafo</label>
+                            <textarea name="paragrafo" cols="30" rows="3" class="form-control"></textarea>
+                        </div>
+                        <!-- parola -->
+                        <div class="mt-3">
+                            <label class="form-label">Parola da censurare</label>
+                            <input name="parola" type="text" placeholder="Scrivi una parola" class="form-control">
+                        </div>
+                        <!-- bottoni -->
+                        <div class="buttons my-4">
+                            <button type="submit" class="btn">Invia</button>
 
-    <div class="container py-5">
-        <div class="row w-50 m-auto">
-            <form action="index.php" method="post">
-
-                <div class="mb-3">
-                    <label class="form-label">Paragrafo</label>
-                    <textarea name="paragrafo" class="form-control" rows="3"></textarea>
+                            <button class="btn">
+                                <a href="index.php" class="text-decoration-none text-black">Torna indietro</a>
+                            </button>
+                        </div>
+                    </form>
                 </div>
-                <div class="mb-3">
-                    <label class="form-label">Parola da censurare</label>
-                    <input name="parola" type="text" class="form-control" placeholder="Scrivi una parola">
-                </div>
-
-
-                <button type="submit" class="btn btn-primary w-25 m-auto">Invia</button>
-                <button class="btn btn-danger w-25 m-auto">
-                    <a class="text-white text-decoration-none" href="index.php">Torna indietro</a>
-                </button>
-            </form>
+            </div>
         </div>
-    </div>
+    </section>
 
 </body>
 
