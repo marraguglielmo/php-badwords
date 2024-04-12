@@ -1,3 +1,11 @@
+<?php
+
+$paragrafo = $_POST['paragrafo'];
+$parola = $_POST['parola'];
+
+var_dump($paragrafo);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,11 +19,32 @@
 </head>
 
 <style>
-
+    .container {
+        .row {
+            height: 100px;
+        }
+    }
 </style>
 
 <body>
-
+    <section>
+        <div class="container">
+            <h1 class="text-center">badWords</h1>
+            <div class="row d-flex align-items-center row-cols-2">
+                <div class="col1">
+                    Il paragrafo ricevuto è: <?php echo $paragrafo ?>
+                </div>
+                <div class="col2">
+                    Parola censurata: <?php echo $parola ?>
+                </div>
+            </div>
+            <div class="container">
+                <button>
+                    <a href="form-post.php">Vai al form</a>
+                </button>
+            </div>
+        </div>
+    </section>
 </body>
 
 </html>
