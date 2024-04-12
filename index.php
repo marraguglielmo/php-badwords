@@ -44,20 +44,20 @@ $parola = $_POST['parola'];
             <h1 class="text-center">badWords</h1>
             <div class="row d-flex align-items-center row-cols-2 my-4">
                 <div class="col1">
-                    <span>Il paragrafo ricevuto è:</span> <?php echo $paragrafo ?>. <br>
-                    <span>La sua lunghezza è: <?php echo strlen($paragrafo) ?></span>
+                    <span>Il paragrafo ricevuto è:</span> <?php echo trim($paragrafo) ?>. <br>
+                    <span>La sua lunghezza è: <?php echo strlen(trim($paragrafo)) ?></span>
                 </div>
                 <div class="col1">
-                    <span>Il paragrafo ricevuto è:</span> <?php echo str_replace($parola, '***', $paragrafo); ?>. <br>
-                    <span>La sua lunghezza è: <?php echo strlen($paragrafo) ?></span>
+                    <span>Il paragrafo ricevuto è:</span> <?php echo str_replace(trim($parola), '***', trim($paragrafo)); ?>. <br>
+                    <span>La sua lunghezza è: <?php echo strlen(trim($paragrafo)) ?></span>
                 </div>
                 <div class="col2">
-                    <span>Parola censurata:</span> <?php echo $parola ?>
+                    <span>Parola censurata:</span> <?php echo trim($parola) ?>
                 </div>
             </div>
             <div class="container">
                 <button class="btn btn-primary">
-                    <a class=" text-white" href="form-post.php">Vai al form</a>
+                    <a class=" text-white text-decoration-none" href="form-post.php">Vai al form</a>
                 </button>
             </div>
         </div>

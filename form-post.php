@@ -27,12 +27,15 @@
                     <textarea name="paragrafo" class="form-control" rows="3"></textarea>
                 </div>
                 <div class="mb-3">
-                    <label class="form-label">Parola</label>
+                    <label class="form-label">Parola da censurare</label>
                     <input name="parola" type="text" class="form-control" placeholder="Scrivi una parola">
                 </div>
 
 
                 <button type="submit" class="btn btn-primary w-25 m-auto">Invia</button>
+                <button class="btn btn-danger w-25 m-auto">
+                    <a class="text-white text-decoration-none" href="index.php">Torna indietro</a>
+                </button>
             </form>
         </div>
     </div>
